@@ -1,6 +1,25 @@
 #--------------------------------------------------------------------------
 # 
 # Script Name: RubyJoke.rb
+# Version: 2.0
+# Author: Antone Cabral
+# Org: Bellevue University WEB312-303J
+# Assignment: Assignment 1.1
+# Date: 8/25/19 (Updated)
+# 
+# Description: 
+#   1. Updated Jokes
+#   2. Add Five Additional Jokes
+#   3. Add Copyright and Website - ("www.ACabral.com")
+#   4. Update comments
+#   5. Comment out all console clear functions except last instance
+# 
+#--------------------------------------------------------------------------
+
+
+#--------------------------------------------------------------------------
+# 
+# Script Name: RubyJoke.rb
 # Version: 1.0
 # Author: Jerry Lee Ford, Jr.
 # Date: March 2010
@@ -8,6 +27,7 @@
 # Description: This Ruby script tells a series of 5 humorous jokes
 # 
 #--------------------------------------------------------------------------
+
 
 
 # Define custom classes ---------------------------------------------------
@@ -48,77 +68,138 @@ else
   
   Console_Screen.cls  #Clear the display area
 
+  ##################### CHANGE JOKES  8/25/19  ####################################
+  #Jokes From - https://athlonsports.com/dad-jokes
+  
   #Display the beginning of the first joke
-  puts "What is black and white and red all over? (Press Enter)"
+  puts "What do you call cheese that isn't yours? (Press Enter)"
 
   pause = STDIN.gets  #Force the player to press Enter to continue
 
   #Display the punch line
-  puts "A messy penguin eating cherry pie! (Press Enter)"
-
+  puts "Nacho Cheese. (Press Enter)"
 
   pause = STDIN.gets  #Force the player to press Enter to continue
 
-
-  Console_Screen.cls  #Clear the display area
+  #Console_Screen.cls  #Clear the display area
  
   #Display the beginning of the second joke
-  puts "What is black and white and red all over? (Press Enter)"
+  puts "What’s an astronaut’s favorite part of a computer? (Press Enter)"
 
   pause = STDIN.gets  #Force the player to press Enter to continue
 
   #Display the punch line
-  puts "A sunburned penguin! (Press Enter)"
+  puts "The space bar. (Press Enter)"
 
 
   pause = STDIN.gets  #Force the player to press Enter to continue
 
 
-  Console_Screen.cls  #Clear the display area
+  #Console_Screen.cls  #Clear the display area
   
   #Display the beginning of the third joke
-  puts "What is black and white and red all over? (Press Enter)"
+  puts "How does a penguin build it's house? (Press Enter)"
 
   pause = STDIN.gets  #Force the player to press Enter to continue
 
   #Display the punch line
-  puts "An embarrassed Dalmatian puppy! (Press Enter)"
+  puts "Igloos it together. (Press Enter)"
 
 
   pause = STDIN.gets  #Force the player to press Enter to continue
 
 
-  Console_Screen.cls  #Clear the display area
+  #Console_Screen.cls  #Clear the display area
   
   #Display the beginning of the fourth joke
-  puts "What is black and white and red all over? (Press Enter)"
+  puts "Why did the coffee file a police report? (Press Enter)"
 
   pause = STDIN.gets  #Force the player to press Enter to continue
 
   #Display the punch line
-  puts "A zebra with a scratched knee! (Press Enter)"
+  puts "It got mugged! (Press Enter)"
 
 
   pause = STDIN.gets  #Force the player to press Enter to continue
 
 
-  Console_Screen.cls  #Clear the display area
+  #Console_Screen.cls  #Clear the display area
   
   #Display the beginning of the fifth joke
-  puts "What is black and white and red all over? (Press Enter)"
+  puts "When does a joke become a dad joke? (Press Enter)"
 
   pause = STDIN.gets  #Force the player to press Enter to continue
 
   #Display the punch line
-  puts "A skunk with diaper rash! (Press Enter)"
-
+  puts "When it becomes apparent! (Press Enter)"
 
   pause = STDIN.gets  #Force the player to press Enter to continue
 
+  #Console_Screen.cls 
+
+  #Display the beginning of the sixth joke
+  puts "Did you hear about the restaurant on the moon? (Press Enter)"
+
+  pause = STDIN.gets  #Force the player to press Enter to continue
+
+  #Display the punch line
+  puts "Great food, no atmosphere. (Press Enter)"
+
+  pause = STDIN.gets  #Force the player to press Enter to continue
+
+  #Console_Screen.cls 
+
+  #Display the beginning of the seventh joke
+  puts "Why do you never see elephants hiding in trees? (Press Enter)"
+
+  pause = STDIN.gets  #Force the player to press Enter to continue
+
+  #Display the punch line
+  puts "Because they're so good at it. (Press Enter)"
+
+  pause = STDIN.gets  #Force the player to press Enter to continue
+
+  #Console_Screen.cls 
+
+  #Display the beginning of the eighth joke
+  puts "Why did the scarecrow win an award? (Press Enter)"
+
+  pause = STDIN.gets  #Force the player to press Enter to continue
+ 
+   #Display the punch line
+   puts "Because he was outstanding in his field. (Press Enter)"
+ 
+  pause = STDIN.gets  #Force the player to press Enter to continue
+
+  #Console_Screen.cls 
+
+  #Display the beginning of the ninth joke
+  puts "Why don't skeletons ever go trick or treating? (Press Enter)"
+
+  pause = STDIN.gets  #Force the player to press Enter to continue
+ 
+  #Display the punch line
+  puts "Because they have no body to go with. (Press Enter)"
+  
+  pause = STDIN.gets  #Force the player to press Enter to continue
+
+  #Console_Screen.cls 
+ 
+  #Display the beginning of the TENTH joke
+  puts "What lies at the bottom of the ocean and twitches? (Press Enter)"
+
+  pause = STDIN.gets  #Force the player to press Enter to continue
+
+  #Display the punch line
+  puts "A nervous wreck. (Press Enter)"
+
+  pause = STDIN.gets  #Force the player to press Enter to continue
 
   Console_Screen.cls  #Clear the display area
 
   puts "Thanks for playing the Ruby Joke game!"
+
+  puts "Copyright 2019. www.ACabral.com."
 
 
 end
