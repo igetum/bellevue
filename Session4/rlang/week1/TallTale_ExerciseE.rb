@@ -1,5 +1,25 @@
 #--------------------------------------------------------------------------
 # 
+# Script Name: TallTale_ExerciseE.rb
+# Version: 2.0
+# Author: Antone Cabral
+# Org: Bellevue University WEB312-303J
+# Assignment: Assignment 
+# Date: 8/28/19 (Updated)
+# 
+# Description: 
+#   1. Added another dynamic piece of information for user to create (line 126)
+#   2. Added Credit and URL information at bottom 
+#   3. Added Transitional between prompts and story
+#   4. Added additional statement when user selects no toward story
+#   5. Added permission loop to get definate yes or no to continue or exit story
+# 
+#--------------------------------------------------------------------------
+
+
+
+#--------------------------------------------------------------------------
+# 
 # Script Name: TallTale.rb
 # Version:     1.0
 # Author:      Jerry Lee Ford, Jr.
@@ -28,7 +48,7 @@ end
 class Tale
 
   #Define class properties representing story elements
-  attr_accessor :monster, :villain, :object, :place, :location
+  attr_accessor :monster, :villain, :object, :place, :location, :aerosol
   
   #Define class properties representing story paragraphs
   attr_accessor :P1, :P2, :P3, :P4
@@ -51,17 +71,35 @@ Console_Screen.cls
 #Prompt the player for permission to begin the game
 print "Would you like to hear an interesting story? (y/n)\n\n: "
 
-answer = STDIN.gets  #Collect the player's response
-answer.chomp!  #Remove any extra characters appended to the string
+loop do  
+  #Execute the Screen object's cls method in order to  
+  #clear the screen  
+  Console_Screen.cls  
+  
+  #Prompt the player for permission to begin the game  
+  print "Would the player like to hear a interesting story" +  "(y/n)\n\n: "  
+  
+  $answer = STDIN.gets #Collect the player's response  
+  $answer.chomp! #Remove any extra characters appended  
+                  #to the string  
+  
+  break if $answer == "y" || $answer == "n"  
 
+end  #Analyze the player's response  
 
-#Analyze the player's response
-if answer == "n"  #See if the player elected not to play
+if $answer == "n" #See if the player elected not  
+                  #to play 
+
+  
 
   Console_Screen.cls  #Clear the display area
 
   #Invite the player to return and play again
   puts "Okay, perhaps another time.\n\n"
+
+  puts "Thank you.\n\n"
+
+
 
 else
 
@@ -105,7 +143,21 @@ else
   print %Q{Enter the name of popular vacation site. (Press Enter)\n\n: }
   location = STDIN.gets  #Force the player to press Enter to continue
   location.chomp!  #Remove any extra characters appended to the string
-  
+
+  #AC - Added new prompt and variable for an aerosol
+  Console_Screen.cls  #Clear the display area
+
+  #Prompt the player to provide some input
+  print %Q{Enter the name of an aerosol. (Press Enter)\n\n: }
+  aerosol = STDIN.gets  #Force the player to press Enter to continue
+  aerosol.chomp!  #Remove any extra characters appended to the string
+
+  #AC - Transitional
+  Console_Screen.cls  
+  print "AND NOW THE STORT BEGINS...."
+  STDIN.gets  #Force the player to press Enter to continue
+
+  Console_Screen.cls
   
   ###############################################
   # It is time to start telling the story       #
@@ -143,13 +195,14 @@ else
 
   }
 
+  # AC - Added aerosol variable
   #Display the fourth paragraph of the story
   Story.P4 = %Q{  Immediately, Alexander, William and Molly flew into 
   action. Alexander threw a #{object} and hit #{villain} in order to get 
   his attention. At the same time William and Molly crept up behind him. 
   William then threw a rope around the feet of #{villain}, momentarily 
   tying him up and allowing Molly to move in and spray #{villain} with 
-  a full can of bug spray, immediately immobilizing and killing 
+  a full can of #{aerosol}, immediately immobilizing and killing 
   #{villain}. The remaining inhabitants returned to their homes and soon 
   life in #{location} was back to normal. Alexander, William and Molly 
   returned to their homes, quietly living on the edge of #{location}, 
@@ -175,6 +228,12 @@ else
 
   Console_Screen.cls  #Clear the display area
   puts "Thanks for helping to tell this Tall Tale!\n\n"
+
+  STDIN.gets
+
+  Console_Screen.cls  #Clear the display area
+  puts "The story was created by Jerry Lee Ford and modified by Antone Cabral.\n\n"
+  puts "www.ACabral.com\n\n"
 
 end
 

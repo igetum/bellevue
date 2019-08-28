@@ -1,6 +1,6 @@
 #--------------------------------------------------------------------------
 # 
-# Script Name: RubyJoke.rb
+# Script Name: RubyJoke_Exercise.rb
 # Version: 2.0
 # Author: Antone Cabral
 # Org: Bellevue University WEB312-303J
