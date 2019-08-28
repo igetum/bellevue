@@ -4,7 +4,7 @@
 # Version: 2.0
 # Author: Antone Cabral
 # Org: Bellevue University WEB312-303J
-# Assignment: Assignment 
+# Assignment: Assignment 1.2
 # Date: 8/28/19 (Updated)
 # 
 # Description: 
