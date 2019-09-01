@@ -7,7 +7,7 @@
 # 
 # Description: This Ruby script demonstrates how to work with variables. It 
 #              generates random numbers to create a fortune-telling game that 
-#              provides randomly selected answers to the player�s questions.
+#              provides randomly selected answers to the player�s questions.
 # 
 #--------------------------------------------------------------------------
 
@@ -37,7 +37,7 @@ class Ball
   
   #Define a method to be used to generate random answers
   def get_fortune
-    randomNo = 1 + rand(6)
+    randomNo = 1 + rand(11)
     
     #Assign an answer based on the randomly generated number 
     case randomNo
@@ -65,12 +65,19 @@ class Ball
     print greeting
   end
   
-  #This method displays the 8-Ball's primary query
-  def get_question
-    question = "Type your question and press the Enter key. \n\n: "
-    print question
-  end
-  
+
+  #This method displays the 8-Ball’s primary query  
+  def get_question  
+    reply = ""  #Loop until the player enters something  
+    until reply != ""  
+      Console_Screen.cls #Clear the display area  
+      question = "Type your question and press the Enter  key. \n\n: "  
+      print question  
+      reply = STDIN.gets #Collect the player’s question  
+      reply.chop! #Remove any extra characters  
+    end  
+  end 
+
   #This method display the 8-Ball answers
   def tell_fortune()
     print "The answer is " + $prediction + ". \n\n: "
@@ -138,7 +145,6 @@ else  #The player has elected to play the game
     #Call upon the method responsible for generating an answer
     Eight_Ball.get_fortune
   
-    Console_Screen.pause  #Pause the game
   
   
     Console_Screen.cls  #Clear the display area

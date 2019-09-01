@@ -1,13 +1,30 @@
 #--------------------------------------------------------------------------
 # 
 # Script Name: Crazy8Ball.rb
+# Version:     2.0
+# Author:      Antone Cabral
+# Date:        8/31/19
+# 
+# Description: Update the crazy8ball game.
+# 
+# 1. Added greeting instructions
+# 2. Updated fortune possibilites
+# 3. Updated get_question method to not allow empty strings or blank qustion
+# 4. 
+# 
+#--------------------------------------------------------------------------
+
+
+#--------------------------------------------------------------------------
+# 
+# Script Name: Crazy8Ball.rb
 # Version:     1.0
 # Author:      Jerry Lee Ford, Jr.
 # Date:        April 2010
 # 
 # Description: This Ruby script demonstrates how to work with variables. It 
 #              generates random numbers to create a fortune-telling game that 
-#              provides randomly selected answers to the player�s questions.
+#              provides randomly selected answers to the player�s questions.
 # 
 #--------------------------------------------------------------------------
 
@@ -53,23 +70,38 @@ class Ball
         $prediction = "unlikely"
       when 6
         $prediction = "unknown"
+      when 7
+        $prediction = "try again later"
+      when 8
+        $prediction = "Don\'t hold your breath."
+      when 9
+        $prediction = "Definitely"
+      when 10
+        $prediction = "Is that even possible?"
     end
     
   end
   
   #This method displays the 8-Ball greeting message
   def say_greeting
-    greeting = "\t\t  Welcome to the Virtual Crazy 8-Ball game!" +
-    "\n\n\n\n\n\n\n\n\n\n\n\n\nPress Enter to " +
+    greeting = "\t\tWelcome to the Virtual Crazy 8-Ball game!" +
+    "\n\t\t   The game will require you to enter a question and \n\t\t   the crazy 8-ball will give your fortune!"
+    "\n\nPress Enter to " +
                "continue. \n\n: "
     print greeting
   end
   
-  #This method displays the 8-Ball's primary query
-  def get_question
-    question = "Type your question and press the Enter key. \n\n: "
-    print question
-  end
+   #This method displays the 8-Ball’s primary query  
+   def get_question  
+    reply = ""  #Loop until the player enters something  
+    until reply != ""  
+      Console_Screen.cls #Clear the display area  
+      question = "Type your question and press the Enter  key. \n\n: "  
+      print question  
+      reply = STDIN.gets #Collect the player’s question  
+      reply.chop! #Remove any extra characters  
+    end  
+  end 
   
   #This method display the 8-Ball answers
   def tell_fortune()
@@ -137,8 +169,7 @@ else  #The player has elected to play the game
   
     #Call upon the method responsible for generating an answer
     Eight_Ball.get_fortune
-  
-    Console_Screen.pause  #Pause the game
+
   
   
     Console_Screen.cls  #Clear the display area
