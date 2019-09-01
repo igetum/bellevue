@@ -10,7 +10,8 @@
 # 1. Added greeting instructions
 # 2. Updated fortune possibilites
 # 3. Updated get_question method to not allow empty strings or blank qustion
-# 4. 
+# 4. Added credits and URL
+# 5. Added credits and URL to prompt when player decides not to play
 # 
 #--------------------------------------------------------------------------
 
@@ -110,7 +111,7 @@ class Ball
 
   #This method displays the 8-Balls closing message
   def say_goodbye
-    goodbye = "Thanks for playing the Virtual Crazy 8-Ball game!\n\n"
+    goodbye = "Thanks for playing the Virtual Crazy 8-Ball game!\n\nAntone Cabral. www.bellevue.edu\n\n"
     puts goodbye
   end
 
@@ -152,6 +153,8 @@ if answer == "n"  #See if the player elected not to play
 
   #Invite the player to return and play again
   puts "Okay, perhaps another time. \n\n"
+
+  Eight_Ball.say_goodbye
 
 else  #The player has elected to play the game
 
