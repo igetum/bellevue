@@ -5,11 +5,12 @@
 # Author:      Antone Cabral
 # Date:        9/9/19
 # 
-# Description: This Ruby script demonstrates how to apply conditional logic 
-#              in order to analyze user input and control script execution 
-#              through the development of a computer typing test that
-#              evaluates the player's typing skills.
-#
+# Description: Modified
+#          Add 5 more sentence challenges
+#          Updated scoring system to deliver a letter grade depending on points
+#          Feedback after incorrect attempt displaying errors
+#          Rejects blank inputs and loop until non-empty entry from player
+#           
 #--------------------------------------------------------------------------
 
 
