@@ -1,6 +1,6 @@
 #--------------------------------------------------------------------------
 # 
-# Script Name: TypingChallengeExerciseE.rb
+# Script Name: TypingChallenge_ExerciseE.rb
 # Version:     2.0
 # Author:      Antone Cabral
 # Date:        9/9/19
