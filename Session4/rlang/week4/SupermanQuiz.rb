@@ -8,8 +8,10 @@
 # Description: Updated Program
 #     1.  Added 5 more questions. 
 #         Source: https://www.usefultrivia.com/comic_book_trivia/superman_trivia_index.html
-#
-#
+#     2.  Added retake logic if user failed
+#     3.  Updated credits to be displayed if user decides not to take quiz
+#     4.  Added Wiki link for user's that failed to help get source for answers
+#     5.  Added a disp_scale method to allow users to see grading system.
 #--------------------------------------------------------------------------
 
 #--------------------------------------------------------------------------
