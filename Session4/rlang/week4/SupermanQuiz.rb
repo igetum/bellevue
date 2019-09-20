@@ -3,7 +3,7 @@
 # Script Name: SupermanQuiz.rb
 # Version:     2.0
 # Author:      Antone Cabral
-# Date:        March 2010
+# Date:        September 20, 2019
 # 
 # Description: Updated Program
 #     1.  Added 5 more questions. 
@@ -236,6 +236,16 @@ loop do
     #Invite the player to return and take the quiz some other time
     puts "Okay, perhaps another time.\n\n"
 
+    Console_Screen.pause
+    Console_Screen.cls
+
+    SQ.display_credits
+
+    Console_Screen.pause
+    Console_Screen.cls
+
+    $noRight = 10 #Cancel out the Retake Quiz Loop
+
   else  #The player wants to take the quiz
 
     #Execute the Quiz class's display_instructions method
@@ -245,87 +255,57 @@ loop do
     #arguments representing a question, possible answers and the letter 
     #of the correct answer
 
-    SQ.disp_q("What is the name of the Daily Planet's ace photographer?",
-    "a. Jimmy Olsen", "b. Clark Kent", "c. Lex Luthor", "d. Lois Lane", 
-    "a")
-    SQ.disp_q("What is the name of the Daily Planet's ace photographer?",
-    "a. Jimmy Olsen", "b. Clark Kent", "c. Lex Luthor", "d. Lois Lane", 
-    "a")
-    SQ.disp_q("What is the name of the Daily Planet's ace photographer?",
-      "a. Jimmy Olsen", "b. Clark Kent", "c. Lex Luthor", "d. Lois Lane", 
-      "a")
-      SQ.disp_q("What is the name of the Daily Planet's ace photographer?",
-      "a. Jimmy Olsen", "b. Clark Kent", "c. Lex Luthor", "d. Lois Lane", 
-      "a")
-      SQ.disp_q("What is the name of the Daily Planet's ace photographer?",
-        "a. Jimmy Olsen", "b. Clark Kent", "c. Lex Luthor", "d. Lois Lane", 
-        "a")
-        SQ.disp_q("What is the name of the Daily Planet's ace photographer?",
-        "a. Jimmy Olsen", "b. Clark Kent", "c. Lex Luthor", "d. Lois Lane", 
-        "a")
-        SQ.disp_q("What is the name of the Daily Planet's ace photographer?",
-          "a. Jimmy Olsen", "b. Clark Kent", "c. Lex Luthor", "d. Lois Lane", 
-          "a")
-          SQ.disp_q("What is the name of the Daily Planet's ace photographer?",
-          "a. Jimmy Olsen", "b. Clark Kent", "c. Lex Luthor", "d. Lois Lane", 
-          "a")
-          SQ.disp_q("What is the name of the Daily Planet's ace photographer?",
-            "a. Jimmy Olsen", "b. Clark Kent", "c. Lex Luthor", "d. Lois Lane", 
-            "a")
-            SQ.disp_q("What is the name of the Daily Planet's ace photographer?",
-            "a. Jimmy Olsen", "b. Clark Kent", "c. Lex Luthor", "d. Lois Lane", 
-            "a")
 
-    # SQ.disp_q("What is the name of the Daily Planet's ace photographer?",
-    # "a. Jimmy Olsen", "b. Clark Kent", "c. Lex Luthor", "d. Lois Lane", 
-    # "a")
+    SQ.disp_q("What is the name of the Daily Planet's ace photographer?",
+    "a. Jimmy Olsen", "b. Clark Kent", "c. Lex Luthor", "d. Lois Lane", 
+    "a")
     
-    # #Call upon the disp_q method and pass it the second question
-    # SQ.disp_q("What is the name of Clark Kent's home town?",
-    # "a. Metropolis", "b. Gotham City", "c. Smallville", "d. New York", 
-    # "c")
+    #Call upon the disp_q method and pass it the second question
+    SQ.disp_q("What is the name of Clark Kent's home town?",
+    "a. Metropolis", "b. Gotham City", "c. Smallville", "d. New York", 
+    "c")
     
-    # #Call upon the disp_q method and pass it the third question
-    # SQ.disp_q("In which movie did Superman battle General Zod?",
-    # "a. Superman", "b. Superman II", "c. Superman III", "d. Superman IV", 
-    # "b")
+    #Call upon the disp_q method and pass it the third question
+    SQ.disp_q("In which movie did Superman battle General Zod?",
+    "a. Superman", "b. Superman II", "c. Superman III", "d. Superman IV", 
+    "b")
     
-    # #Call upon the disp_q method and pass it the fourth question
-    # SQ.disp_q("What is the name of Superman's father?",
-    # "a. Nimo", "b. Jarrell", "c. Lex Luthor", "d. Krypton", 
-    # "b")
+    #Call upon the disp_q method and pass it the fourth question
+    SQ.disp_q("What is the name of Superman's father?",
+    "a. Nimo", "b. Jarrell", "c. Lex Luthor", "d. Krypton", 
+    "b")
     
-    # #Call upon the disp_q method and pass it the fifth question
-    # SQ.disp_q("Where had Superman been at the start of 'Superman Returns'?",
-    # "a. Moon", "b. Fortress of Solitude", "c. Earth's Core", "d. Krypton", 
-    # "d")
+    #Call upon the disp_q method and pass it the fifth question
+    SQ.disp_q("Where had Superman been at the start of 'Superman Returns'?",
+    "a. Moon", "b. Fortress of Solitude", "c. Earth's Core", "d. Krypton", 
+    "d")
 
     # #ADDED NEW QUESTIONS __________________________________________________________
 
-    # #Call upon the disp_q method and pass it the sixth question
-    # SQ.disp_q("What is Clark Kent's middle name?",
-    #   "a. Thomas", "b. Jacob", "c. Walter", "d. Joseph", 
-    #   "d")
+    #Call upon the disp_q method and pass it the sixth question
+    SQ.disp_q("What is Clark Kent's middle name?",
+      "a. Thomas", "b. Jacob", "c. Walter", "d. Joseph", 
+      "d")
 
-    # #Call upon the disp_q method and pass it the seventh question
-    # SQ.disp_q("What is Superman's Kryptonian name?",
-    #   "a. Zor-el", "b. Jimbo", "c. Jor-el", "d. Kal-el", 
-    #   "d")
+    #Call upon the disp_q method and pass it the seventh question
+    SQ.disp_q("What is Superman's Kryptonian name?",
+      "a. Zor-el", "b. Jimbo", "c. Jor-el", "d. Kal-el", 
+      "d")
     
-    # #Call upon the disp_q method and pass it the eighth question
-    # SQ.disp_q("What was the name of Superman's birth mother?",
-    # "a. Lara", "b. Kara", "c. Xala", "d. Faora", 
-    # "a")
+    #Call upon the disp_q method and pass it the eighth question
+    SQ.disp_q("What was the name of Superman's birth mother?",
+    "a. Lara", "b. Kara", "c. Xala", "d. Faora", 
+    "a")
 
-    # #Call upon the disp_q method and pass it the nineth question
-    # SQ.disp_q("What was the first newspaper Clark Kent worked for?",
-    #   "a. Dailey Bugle", "b. Daily Star", "c. Daily Planet", "d. Cleaveland Evening News", 
-    #   "d")
+    #Call upon the disp_q method and pass it the nineth question
+    SQ.disp_q("What was the first newspaper Clark Kent worked for?",
+      "a. Dailey Bugle", "b. Daily Star", "c. Daily Planet", "d. Cleaveland Evening News", 
+      "d")
 
-    # #Call upon the disp_q method and pass it the tenth question
-    # SQ.disp_q("Who did Superman entrust with a Kryptonite ring to stop him if he ever turned evil?",
-    #   "a. Batman", "b. Jimmy Olsen", "c. Wonder Woman", "d. Lois Lane", 
-    #   "b")
+    #Call upon the disp_q method and pass it the tenth question
+    SQ.disp_q("What is Clark Kent's adopted mother's name?",
+      "a. Martha", "b. Lara", "c. Lana", "d. Mary", 
+      "b")
     
     #Call upon the Quiz class's determine_grade method to display
     #the player's grade and assigned rank
@@ -336,8 +316,6 @@ loop do
     SQ.display_credits
     
   end
-
-  puts($noRight)
 
   if $noRight <= 5 then
 
