@@ -2,7 +2,7 @@
 # 
 # Script Name: SupermanQuiz.rb
 # Version:     2.0
-# Author:      JAntone Cabral
+# Author:      Antone Cabral
 # Date:        March 2010
 # 
 # Description: Updated Program
