@@ -3,13 +3,16 @@
 # Script Name: WordGuess.rb
 # Version:     2.0
 # Author:      Antone Cabral  
-# Date:        9/29/19
+# Date:        10/2/19
 # 
-# Description: This Ruby script demonstrates how to work with regular
-#              expressions through the development of a computer game 
-#              that challenges the player to guess a mystery word after 
-#              being first allowed to guess 5 consonants and 1 vowel.
-#
+# Description: 
+#     1. Added 10 more words making it 20!
+#     2. Updated instructions
+#     3. Only shows intructions when pressing "h" key when prompt to play game
+#     4. Gives list of entered guesses to prevent double entry. Also added a Redo
+#         to allow loop not count that double entry.
+#     5. converted wordlist to lowercase and when random word is shown
+#         it is lowercase with a capital letter.
 #--------------------------------------------------------------------------
 
 
@@ -266,11 +269,11 @@ class Game
     3.times do |i|  #i equals 0 on the first iteration of the loop
         
       Console_Screen.cls       #Clear the display area
-      
+    
         
       if replyList.length >= 1 then
             puts "Previous Guesses:"
-            puts replyList.inspect
+            puts replyList
         end
       
 
@@ -290,14 +293,18 @@ class Game
         Console_Screen.pause       #Pause the game
         break  #Terminate the execution of the loop
         
-      elsif replyList.include? reply then
-        Console_Screen.cls
-        puts "\n\nYou have made that guess already! Be Careful."
-      
-        Console_Screen.pause
-        Console_Screen.cls
+    
 
       else  #The player did not guess the secret word
+
+        if replyList.include? reply then
+          Console_Screen.cls
+          puts "\n\nYou have made that guess already! Be Careful."
+        
+          Console_Screen.pause
+          Console_Screen.cls
+          redo #added a redo in case of double guess
+        end
 
         
         replyList.push(reply)
