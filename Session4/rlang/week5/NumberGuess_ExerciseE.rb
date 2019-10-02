@@ -98,7 +98,8 @@ class Game
   def play_game
 
     #Call on the generate_number method in order to get a random number
-    number = generate_number  
+    number = generate_number
+    $noOfGuesses = 0 
 
     #Loop until the player inputs a valid answer
     loop do
